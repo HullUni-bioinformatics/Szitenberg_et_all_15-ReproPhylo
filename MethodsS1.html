@@ -177,7 +177,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Analysis-for-the-ReproPhylo-menuscript">Analysis for the ReproPhylo menuscript<a class="anchor-link" href="#Analysis-for-the-ReproPhylo-menuscript">&#182;</a></h1><p>This notebook containts the analysis conducted for the ReproPhylo manuscript. The repository containig it, as well as related files is at <a href="https://github.com/HullUni-bioinformatics">https://github.com/HullUni-bioinformatics</a>. The ReproPhylo pipeline is needed to run it is provided as a <a href="https://registry.hub.docker.com/u/szitenberg/reprophylo/">Docker image</a>. The manual and development version is in our Git page <a href="http://hulluni-bioinformatics.github.io/ReproPhylo/">GitHub page</a>.</p>
+<h1 id="Analysis-for-the-ReproPhylo-menuscript">Analysis for the ReproPhylo menuscript<a class="anchor-link" href="#Analysis-for-the-ReproPhylo-menuscript">&#182;</a></h1><p>This notebook containts the analysis conducted for the ReproPhylo manuscript. <a href="https://github.com/HullUni-bioinformatics/Szitenberg_et_all_15-ReproPhylo">The repository containig it</a>, as well as related files is at <a href="https://github.com/HullUni-bioinformatics">https://github.com/HullUni-bioinformatics</a>. The ReproPhylo pipeline is needed to run it is provided as a <a href="https://registry.hub.docker.com/u/szitenberg/reprophylo/">Docker image</a>. The manual and development version is in our Git page <a href="http://hulluni-bioinformatics.github.io/ReproPhylo/">GitHub page</a>.</p>
 <h1 id="Table-of-content">Table of content<a class="anchor-link" href="#Table-of-content">&#182;</a></h1><p>1   <a href="#1-The-full,-unannotated-script:">The full unannotates script</a><br>
 2   <a href="#2-The-same-script,-with-annotations">The same script, with annotations</a><br>
 &nbsp;&nbsp;&nbsp;2.1   <a href="#2.1-Turn-a-nexus-file-with-PAUP-style-charset-lines-into-a-ReproPhylo-Project-instance">Turn a nexus file with PAUP style charset lines into a ReproPhylo Project instance</a><br>
@@ -189,7 +189,7 @@ div#notebook {
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.6.1   <a href="#2.6.1-Calculating-the-statistics">Calculating the statistics</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.6.2   <a href="#2.6.2-Sort-the-alignmnets-according-to-statistics-values">Sort the loci according to statistics values</a><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.6.3   <a href="#2.6.3-Figure-2-A">Figure 2A</a><br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.6.4   <a href="b#2.6.4-Plot-a-box-plot-for-each-parameter-for-each-locus">Plot a box plot for each parameter and locus</a><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.6.4   <a href="b#2.6.4-Plot-a-box-plot-for-each-parameter-for-each-locus">Figure S1, Plot a box plot for each parameter and locus</a><br>
 &nbsp;&nbsp;&nbsp;2.7   <a href="#2.7-Prepare-the-Concatenation-objects">Prepare the Concatenation objects</a><br>
 &nbsp;&nbsp;&nbsp;2.8   <a href="#2.8-Reconstruct-the-trees">Reconstruct the trees</a><br>
 &nbsp;&nbsp;&nbsp;2.9   <a href="#2.9-Verify-git-commit">Verify the git commit</a><br>
@@ -2353,7 +2353,7 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4Cj9f3oSBhqe9zEvAAAAAElFTkSuQmCC
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="2.6.4-Plot-a-box-plot-for-each-parameter-for-each-locus">2.6.4 Plot a box plot for each parameter for each locus<a class="anchor-link" href="#2.6.4-Plot-a-box-plot-for-each-parameter-for-each-locus">&#182;</a></h3><p>In the resulting figure the loci will be sorted in a descending order of the entropy median, as a result of the above sorting step.
+<h3 id="2.6.4-Figure-S1,-Plot-a-box-plot-for-each-parameter-for-each-locus">2.6.4 Figure S1, Plot a box plot for each parameter for each locus<a class="anchor-link" href="#2.6.4-Figure-S1,-Plot-a-box-plot-for-each-parameter-for-each-locus">&#182;</a></h3><p>In the resulting figure the loci will be sorted in a descending order of the entropy median, as a result of the above sorting step.
 As expected, entropy is correlated with the conservation value. It is not correlated with other measures which makes its effect easy to check.</p>
 
 </div>
@@ -5840,6 +5840,122 @@ archiving
 report ready
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.13-Add-README-and-commit">2.13 Add README and commit<a class="anchor-link" href="#2.13-Add-README-and-commit">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="o">%%</span><span class="k">file</span> README.md
+This repository was automatically created and 
+maintained by [ReproPhylo V1](http://hulluni-bioinformatics.github.io/ReproPhylo/). 
+It contains the analysis done for the paper *ReproPhylo: a python package 
+ for reproducible phylogenomics* by Amir Szitenberg, Max John, Mark Blaxter and David Lunt.
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Writing README.md
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="2.14-Manual-commit-of-some-additional-files">2.14 Manual commit of some additional files<a class="anchor-link" href="#2.14-Manual-commit-of-some-additional-files">&#182;</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c"># Just in case, commit the pickle again</span>
+<span class="n">pickle_pj</span><span class="p">(</span><span class="n">pj</span><span class="p">,</span> <span class="s">&quot;szitenberg_et_al_15_reprophylo&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&apos;szitenberg_et_al_15_reprophylo&apos;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span class="c"># files to add manually:</span>
+<span class="n">files</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;rf_figs&#39;</span><span class="p">,</span> <span class="s">&#39;butterfly_figs/&#39;</span><span class="p">,</span> <span class="s">&#39;silhouettes/&#39;</span><span class="p">,</span> <span class="s">&#39;MethodsS1.html, Figure1.pdf&#39;</span><span class="p">,</span> <span class="s">&#39;Figure1.png&#39;</span><span class="p">,</span>
+      <span class="s">&#39;Figure2.pdf&#39;</span><span class="p">,</span> <span class="s">&#39;Figure2.png&#39;</span><span class="p">,</span> <span class="s">&#39;Figure2.png&#39;</span><span class="p">,</span> <span class="s">&#39;plots.png&#39;</span><span class="p">,</span> <span class="s">&#39;entropy.png&#39;</span><span class="p">,</span>
+      <span class="s">&#39;README.md&#39;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+    <span class="n">rpgit</span><span class="o">.</span><span class="n">gitAdd</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+<span class="n">rpgit</span><span class="o">.</span><span class="n">gitCommit</span><span class="p">(</span><span class="s">&#39;Additional files for the MS commited manually&#39;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[10]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>(&apos;[master da6bc03] Additional files for the MS commited manually\n 1 file changed, 4 insertions(+)\n create mode 100644 README.md\n&apos;,
+ &apos;&apos;)</pre>
+</div>
+
 </div>
 
 </div>
