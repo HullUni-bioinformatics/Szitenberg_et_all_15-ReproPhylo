@@ -177,7 +177,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Analysis-for-the-ReproPhylo-menuscript">Analysis for the ReproPhylo menuscript<a class="anchor-link" href="#Analysis-for-the-ReproPhylo-menuscript">&#182;</a></h1><p>This notebook containts the analysis conducted for the ReproPhylo manuscript. <a href="https://github.com/HullUni-bioinformatics/Szitenberg_et_all_15-ReproPhylo">The repository containig it</a>, as well as related files, is at <a href="https://github.com/HullUni-bioinformatics">https://github.com/HullUni-bioinformatics</a>. The ReproPhylo pipeline is needed to run it is provided as a <a href="https://registry.hub.docker.com/u/szitenberg/reprophylo/">Docker image</a>. The manual and development version is in our Git page <a href="http://hulluni-bioinformatics.github.io/ReproPhylo/">GitHub page</a>.</p>
+<h1 id="Analysis-for-the-ReproPhylo-manuscript">Analysis for the ReproPhylo manuscript<a class="anchor-link" href="#Analysis-for-the-ReproPhylo-manuscript">&#182;</a></h1><p>This notebook containts the analysis conducted for the ReproPhylo manuscript. <a href="https://github.com/HullUni-bioinformatics/Szitenberg_et_all_15-ReproPhylo">The repository containig it</a>, as well as related files, is at <a href="https://github.com/HullUni-bioinformatics">https://github.com/HullUni-bioinformatics</a>. The ReproPhylo pipeline is needed to run it is provided as a <a href="https://registry.hub.docker.com/u/szitenberg/reprophylo/">Docker image</a>. The manual and development version is in our Git page <a href="http://hulluni-bioinformatics.github.io/ReproPhylo/">GitHub page</a>.</p>
 <h1 id="Table-of-content">Table of content<a class="anchor-link" href="#Table-of-content">&#182;</a></h1><p>1   <a href="#1-The-full,-unannotated-script:">The full unannotates script</a><br>
 2   <a href="#2-The-same-script,-with-annotations">The same script, with annotations</a><br>
 &nbsp;&nbsp;&nbsp;2.1   <a href="#2.1-Turn-a-nexus-file-with-PAUP-style-charset-lines-into-a-ReproPhylo-Project-instance">Turn a nexus file with PAUP style charset lines into a ReproPhylo Project instance</a><br>
@@ -1052,29 +1052,13 @@ pj = unpickle_pj('szitenberg_et_al_15_reprophylo')
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[39]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c">#pj = unpickle_pj(&#39;szitenberg_et_al_15_reprophylo&#39;)</span>
 </pre></div>
 
 </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area"><div class="prompt"></div>
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>DEBUG:Cloud:Log file (/home/amir/.picloud/cloud.log) opened
-/home/amir/Dropbox/python_modules/reprophylo.py:240: UserWarning: Git repository exists for this Project
-  warnings.warn(&apos;Git repository exists for this Project&apos;)
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -2957,7 +2941,7 @@ None
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="c"># Sort the trees in sensible order (optional)</span>
@@ -2972,7 +2956,7 @@ None
 <div class="output">
 
 
-<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -4728,12 +4712,12 @@ AIBhKEAAAAAAGIYCBAAAAIBhKEAAAAAAGIYCBAAAAIBh/j8c/fv6AG8p9QAAAABJRU5ErkJggg==
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span class="n">publish</span><span class="p">(</span><span class="n">pj</span><span class="p">,</span> <span class="s">&#39;report&#39;</span><span class="p">,</span> <span class="s">&#39;butterfly_figs/&#39;</span><span class="p">,</span>
         <span class="n">compare_trees</span><span class="o">=</span><span class="p">[</span><span class="s">&#39;topology&#39;</span><span class="p">,</span><span class="s">&#39;branch-length&#39;</span><span class="p">,</span><span class="s">&#39;proportional&#39;</span><span class="p">],</span>
-        <span class="n">trees_to_compare</span><span class="o">=</span><span class="n">trees</span><span class="p">,</span> <span class="n">unrooted_trees</span><span class="o">=</span><span class="bp">True</span> <span class="p">)</span>
+        <span class="n">trees_to_compare</span><span class="o">=</span><span class="n">trees</span> <span class="p">)</span>
 </pre></div>
 
 </div>
@@ -4763,12 +4747,8 @@ report ready
 
 <div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/usr/lib/pymodules/python2.7/matplotlib/colorbar.py:829: RuntimeWarning: invalid value encountered in divide
-  z = np.take(y, i0) + (xn - np.take(b, i0)) * dy / db
-/usr/lib/pymodules/python2.7/matplotlib/colorbar.py:581: RuntimeWarning: invalid value encountered in greater
-  inrange = (ticks &gt; -0.001) &amp; (ticks &lt; 1.001)
-/usr/lib/pymodules/python2.7/matplotlib/colorbar.py:581: RuntimeWarning: invalid value encountered in less
-  inrange = (ticks &gt; -0.001) &amp; (ticks &lt; 1.001)
+<pre>/home/amir/Dropbox/python_modules/reprophylo.py:5157: UserWarning: proportional branch-distance: Trees must have the same taxa
+  warnings.warn(&apos;proportional branch-distance: Trees must have the same taxa&apos;)
 </pre>
 </div>
 </div>
@@ -4782,7 +4762,7 @@ report ready
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="2.13-Add-README-and-commit">2.13 Add README and commit<a class="anchor-link" href="#2.13-Add-README-and-commit">&#182;</a></h2>
+<h2 id="2.13-Add-README">2.13 Add README<a class="anchor-link" href="#2.13-Add-README">&#182;</a></h2>
 </div>
 </div>
 </div>
